@@ -205,6 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43786ed508b323f45bde76a575c6a596, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deck: {fileID: 11400000, guid: 755621c7bc410704c8f88667d4de5f1a, type: 2}
   card: {fileID: 2990594775442084102, guid: 9d59df82f7cff8243b90ec002df9afd1, type: 3}
   handTransform: {fileID: 809434171}
   fanSpread: 5
