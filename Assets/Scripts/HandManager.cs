@@ -11,16 +11,21 @@ public class HandManager : MonoBehaviour
     public Transform handTransform; //The position of the player's hand
 
     public float fanSpread = 5f;
+    public float startingHandAmount = 5f;
     public List<GameObject> cardsInHand = new List<GameObject>(); //List of card game objects in hand
 
     // Start is called before the first frame update
     void Start()
     {
-        AddCardToHand();
-        AddCardToHand();
-        AddCardToHand();
-        AddCardToHand();
-        AddCardToHand();
+        //AddCardToHand();
+        //AddCardToHand();
+        //AddCardToHand();
+        //AddCardToHand();
+        for (int i = 1; i <= startingHandAmount; i++)
+        {
+            AddCardToHand();
+
+        }
     }
 
     public void AddCardToHand()
