@@ -21,6 +21,12 @@ public class HandManager : MonoBehaviour
         //AddCardToHand();
         //AddCardToHand();
         //AddCardToHand();
+        
+    }
+
+    public void BeginMatch()
+    {
+        //draw starting hand
         for (int i = 1; i <= startingHandAmount; i++)
         {
             AddCardToHand();

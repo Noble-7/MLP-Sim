@@ -5,7 +5,7 @@ using UnityEngine;
 namespace MLPCardGame
 {
 
-    [CreateAssetMenu(fileName = "New Card", menuName = "Card")]
+    [CreateAssetMenu(fileName = "New Card", menuName = "ScriptableObject/Card")]
     public class Card : ScriptableObject
     {
         public string cardName;
