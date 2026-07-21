@@ -7,7 +7,7 @@ public class HandManager : MonoBehaviour
 {
     public Deck deck;
 
-    public List<Card> mainDeckHolder;
+    private List<Card> mainDeckHolder;
 
 
     public GameObject card;
@@ -29,7 +29,7 @@ public class HandManager : MonoBehaviour
 
     public void BeginMatch()
     {
-        mainDeckHolder = deck.mainDeckCards;
+        mainDeckHolder = new List<Card>(deck.mainDeckCards);
         //draw starting hand
         for (int i = 1; i <= startingHandAmount; i++)
         {
@@ -45,7 +45,7 @@ public class HandManager : MonoBehaviour
         GameObject newCard = Instantiate(card, handTransform.position, Quaternion.identity, handTransform);
 
         //generate random number from deck and grab card from main deck holder to give data to card object
-        int num = Random.Range(0, mainDeckHolder.Count);
+        int num = Random.Range(0, mainDeckHolder.Count - 1);
         newCard.GetComponent<CardDataHolder>().InitializeCard(mainDeckHolder[num]);
         mainDeckHolder.RemoveAt(num);
 
